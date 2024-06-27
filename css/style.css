@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-weight: bolder;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+}
+nav img {
+  margin-top: 10px;
+  height: 25px;
+}
+
+#burgur_menu {
+  position: absolute;
+  height: 15px;
+  top: 10px;
+  right: 40px;
+}
+
+.pg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.pg:nth-child(2) {
+  background-image: url(./../assets/photo-1517976487492-5750f3195933.avif);
+}
+.pg:nth-child(3) {
+  background-image: url(./../assets/photo-1517976547714-720226b864c1.avif);
+}
+.pg:nth-child(4) {
+  background-image: url(./../assets/photo-1614642240262-a452c2c11724.avif);
+}
+.pg:nth-child(5) {
+  background-image: url(./../assets/photo-1517976487492-5750f3195933.avif);
+}
+.pg:nth-child(6) {
+  background-image: url(./../assets/photo-1551871812-10ecc21ffa2f.avif);
+}
+.pg:nth-child(7) {
+  background-image: url(./../assets/photo-1517976547714-720226b864c1.avif);
+}
+
+.buttonclass {
+  border: 3px white solid;
+  background-color: transparent;
+  color: white;
+  padding: 15px 30px;
+}
+
+footer {
+  height: 8vh;
+  background-color: black;
+}
