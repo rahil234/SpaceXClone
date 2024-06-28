@@ -5,7 +5,7 @@
 
 body {
   font-weight: bolder;
-  font-family: D-DIN bold,Arial, Verdana, sans-serif;
+  font-family: D-DIN bold, Arial, Verdana, sans-serif;
   color: white;
 }
 
@@ -16,6 +16,7 @@ nav {
   position: absolute;
   top: 0;
 }
+
 nav img {
   margin-top: 10px;
   height: 25px;
@@ -53,28 +54,52 @@ body > div:nth-child(3) {
   background-image: url(./../assets/image.png);
 }
 
-
-.pg .container{
+.pg .container {
   padding: 65vh 0 0 3vw;
   width: 30vw;
 }
 
-h3{
+h3 {
   font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 20px;
   text-wrap: wrap;
-
 }
 
 .buttonclass {
-  font-weight: bold;
-  font-size: 0.8em;
-  border: 2px white solid;
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
   background-color: transparent;
-  color: white;
-  padding: 15px 30px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  transition: background-color 1s ease;
+  z-index: 1;
 }
+
+.buttonclass::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #650808;
+  transform: translateY(100%);
+  z-index: -1;
+}
+
+.buttonclass:hover::before {
+  transform: translateY(0);
+}
+
+.buttonclass:hover {
+  background-color: #ffffff;
+}
+
 
 footer {
   display: flex;
@@ -87,7 +112,7 @@ footer {
   font-size: 0.7em;
 }
 
-footer span{
+footer span {
   font-weight: 100;
   font-size: 1.1em;
 }
