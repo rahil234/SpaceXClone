@@ -1,3 +1,33 @@
+/* For webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px;  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;  /* Transparent background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);  /* Semi-transparent thumb */
+  border-radius: 10px;  /* Rounded corners */
+  border: 3px solid transparent;  /* Transparent border for padding */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.7);  /* Darker thumb on hover */
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;  /* Thin scrollbar */
+  scrollbar-color: rgba(0, 0, 0, 0.5) transparent;  /* Thumb and track color */
+}
+
+html:hover {
+  scrollbar-color: rgba(0, 0, 0, 0.7) transparent;  /* Darker thumb on hover */
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -10,34 +40,49 @@ body {
   color: white;
 }
 
-.header{
+.header {
+  margin-top: 40px;
   width: 100%;
   position: fixed;
   display: flex;
   align-items: center;
+  justify-content: center;
   z-index: 100;
 }
 
-.header_inner{
+.header_inner {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.navigation {
+  display: flex;
+}
+.nav_links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 13px;
 }
 
-.nav_right{
+nav #logo {
+  height: 25px;
+  position: absolute;
+  transform: translateY(-10px);
+  translate: -500px 4px;
+}
+
+.nav_right {
   position: absolute;
   top: 0;
+  right: 0;
+  display: flex;
 }
 
-nav img {
-  margin-top: 10px;
-  height: 25px;
-}
-
-#burgur_menu {
-  position: absolute;
-  height: 15px;
-  top: 10px;
-  right: 40px;
+.nav_right #burger_menu {
+  padding: 0 20px;
+  height: 18px;
+  translate: 0 -2px;
 }
 
 .pg {
@@ -50,10 +95,10 @@ nav img {
 }
 
 body > div:nth-child(2) {
-  background-image: url(./../assets/photo-1517976487492-5750f3195933.avif);
+  background-image: url(./../assets/photo-1517976547714-720226b864c1.avif);
 }
 body > div:nth-child(3) {
-  background-image: url(./../assets/photo-1517976547714-720226b864c1.avif);
+  background-image: url(./../assets/photo-1517976487492-5750f3195933.avif);
 }
 .pg:nth-child(4) {
   background-image: url(./../assets/photo-1614642240262-a452c2c11724.avif);
@@ -116,7 +161,6 @@ h3 {
   background-color: #ffffff;
 }
 
-
 footer {
   display: flex;
   justify-content: center;
@@ -131,4 +175,10 @@ footer {
 footer span {
   font-weight: 100;
   font-size: 1.1em;
+}
+
+@media (max-width: 50rem) {
+  .header{
+    display: none;
+  }
 }
