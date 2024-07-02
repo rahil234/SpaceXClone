@@ -1,37 +1,41 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-weight: bolder;
-  font-family: D-DIN bold,Arial, Verdana, sans-serif;
-  color: white;
+  font-family: Arial, Verdana, sans-serif;
+  background-color: white;
 }
 
-nav {
+.header{
   width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.header_inner{
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 0;
-}
-nav img {
-  margin-top: 10px;
-  height: 25px;
 }
 
-#burgur_menu {
+.nav_right{
   position: absolute;
-  height: 15px;
-  top: 10px;
-  right: 40px;
+  top: 0;
+  right: 0;
 }
 
 .pg {
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  background-position-x: center;
+  color: white;
 }
 
 body > div:nth-child(2) {
@@ -53,18 +57,17 @@ body > div:nth-child(3) {
   background-image: url(./../assets/image.png);
 }
 
-
-.pg .container{
-  padding: 65vh 0 0 3vw;
+.pg .container {
+  position: absolute;
   width: 30vw;
+  left: 5vw;
+  bottom: 10vh;
 }
 
-h3{
+h3 {
   font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 20px;
-  text-wrap: wrap;
-
 }
 
 .buttonclass {
@@ -87,7 +90,7 @@ footer {
   font-size: 0.7em;
 }
 
-footer span{
+footer span {
   font-weight: 100;
   font-size: 1.1em;
 }
