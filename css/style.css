@@ -6,8 +6,8 @@
 
 body {
   font-weight: bolder;
-  font-family: Arial, Verdana, sans-serif;
-  background-color: white;
+  font-family: D-DIN bold, Arial, Verdana, sans-serif;
+  color: white;
 }
 
 .header{
@@ -26,7 +26,18 @@ body {
 .nav_right{
   position: absolute;
   top: 0;
-  right: 0;
+}
+
+nav img {
+  margin-top: 10px;
+  height: 25px;
+}
+
+#burgur_menu {
+  position: absolute;
+  height: 15px;
+  top: 10px;
+  right: 40px;
 }
 
 .pg {
@@ -58,7 +69,7 @@ body > div:nth-child(3) {
 }
 
 .pg .container {
-  position: absolute;
+  padding: 65vh 0 0 3vw;
   width: 30vw;
   left: 5vw;
   bottom: 10vh;
@@ -68,16 +79,43 @@ h3 {
   font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 20px;
+  text-wrap: wrap;
 }
 
 .buttonclass {
-  font-weight: bold;
-  font-size: 0.8em;
-  border: 2px white solid;
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
   background-color: transparent;
-  color: white;
-  padding: 15px 30px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  transition: background-color 1s ease;
+  z-index: 1;
 }
+
+.buttonclass::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #650808;
+  transform: translateY(100%);
+  z-index: -1;
+}
+
+.buttonclass:hover::before {
+  transform: translateY(0);
+}
+
+.buttonclass:hover {
+  background-color: #ffffff;
+}
+
 
 footer {
   display: flex;
